@@ -1,0 +1,42 @@
+/* ── Design tokens ── */
+:root {
+  --pink: #ff3dd5;
+  --pink-dark: #c200a0;
+  --text: #2d2d2d;
+  --bg-pink: #FFE8FE;
+  --bg-body: #FEF8FE;
+}
+
+/* ── Scroll suave global ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respeita preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #FEF8FE;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus visible (acessibilidade) ── */
+:focus-visible {
+  outline: 2px solid #ff3dd5;
+  outline-offset: 3px;
+  border-radius: 4px;
+}

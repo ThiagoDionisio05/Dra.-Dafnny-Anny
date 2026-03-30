@@ -1,0 +1,258 @@
+/* ── Footer ── */
+.footer-top {
+  background: #FFE8FE;
+  border-radius: 48px 48px 0 0;
+  padding: 72px 75px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-top::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(255, 61, 213, 0.13) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Marca */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-logo {
+  font-family: "Italianno", cursive;
+  font-style: italic;
+  font-size: 2rem;
+  color: #2d2d2d;
+  line-height: 1;
+}
+
+.footer-cro {
+  font-size: 0.85rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-cro i {
+  color: #c200a0;
+  font-size: 0.8rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.65;
+  margin-top: 4px;
+}
+
+.footer-contact-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-top: 8px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.footer-social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(194, 0, 160, 0.3);
+}
+
+.footer-wa,
+.footer-ig {
+  background: linear-gradient(135deg, #ff3dd5, #c200a0);
+  color: #fff;
+}
+
+/* Colunas */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-col-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff3dd5, #c200a0);
+  border-radius: 2px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: #666;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.footer-col ul li a:hover {
+  color: #c200a0;
+  padding-left: 4px;
+}
+
+/* Mapa */
+.footer-map {
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(194, 0, 160, 0.12);
+  background: #e8d0e8;
+  position: relative;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Placeholder visual quando iframe vazio */
+.footer-map iframe:not([src]),
+.footer-map iframe[src=""] {
+  display: none;
+}
+
+.footer-map:has(iframe:not([src])),
+.footer-map:has(iframe[src=""]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: #c200a0;
+  font-size: 0.82rem;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-map:has(iframe:not([src]))::before,
+.footer-map:has(iframe[src=""])::before {
+  content: "\f3c5";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #c200a0;
+}
+
+.footer-map:has(iframe:not([src]))::after,
+.footer-map:has(iframe[src=""])::after {
+  content: "Insira o link do Google Maps";
+  font-size: 0.78rem;
+  color: #b06aaa;
+}
+
+.footer-address {
+  font-size: 0.82rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: -4px;
+}
+
+.footer-address i {
+  color: #c200a0;
+  font-size: 0.75rem;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  background: linear-gradient(135deg, #ff3dd5, #c200a0);
+  padding: 18px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Playfair Display", serif;
+}
+
+.footer-dev {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ── Responsivo footer ── */
+@media (max-width: 1024px) {
+  .footer-top { padding: 60px 40px 50px; }
+  .footer-container { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .footer-map-col { grid-column: span 2; }
+  .footer-map { height: 180px; }
+  .footer-bottom { padding: 16px 40px; }
+}
+
+@media (max-width: 768px) {
+  .footer-top { padding: 48px 24px 40px; border-radius: 32px 32px 0 0; }
+  .footer-container { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-map-col { grid-column: span 2; }
+  .footer-bottom { padding: 14px 24px; flex-direction: column; text-align: center; gap: 4px; }
+}
+
+@media (max-width: 480px) {
+  .footer-top { padding: 40px 16px 32px; border-radius: 24px 24px 0 0; }
+  .footer-container { grid-template-columns: 1fr; gap: 32px; }
+  .footer-map-col { grid-column: span 1; }
+  .footer-map { height: 160px; }
+  .footer-bottom { padding: 14px 16px; }
+}
